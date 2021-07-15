@@ -8,13 +8,14 @@ endif()
 include(CTest)
 enable_testing()
 
-add_executable(LongExposer main.cpp FrameExtractor.cpp FrameExtractor.hpp 
-    AVCodecContextHolder.cpp AVCodecContextHolder.hpp
-    AVFormatContextHolder.cpp AVFormatContextHolder.hpp
-    RGBFrameConverter.cpp RGBFrameConverter.hpp
-    AVPacketHolder.cpp AVPacketHolder.hpp
-    AVFrameHolder.cpp AVFrameHolder.hpp
-    AVExceptions.hpp)
+add_executable(LongExposer ${CMAKE_CURRENT_LIST_DIR}/main.cpp 
+    ${CMAKE_CURRENT_LIST_DIR}/FrameExtractor.cpp ${CMAKE_CURRENT_LIST_DIR}/FrameExtractor.hpp 
+    ${CMAKE_CURRENT_LIST_DIR}/AVCodecContextHolder.cpp ${CMAKE_CURRENT_LIST_DIR}/AVCodecContextHolder.hpp
+    ${CMAKE_CURRENT_LIST_DIR}/AVFormatContextHolder.cpp ${CMAKE_CURRENT_LIST_DIR}/AVFormatContextHolder.hpp
+    ${CMAKE_CURRENT_LIST_DIR}/RGBFrameConverter.cpp ${CMAKE_CURRENT_LIST_DIR}/RGBFrameConverter.hpp
+    ${CMAKE_CURRENT_LIST_DIR}/AVPacketHolder.cpp ${CMAKE_CURRENT_LIST_DIR}/AVPacketHolder.hpp
+    ${CMAKE_CURRENT_LIST_DIR}/AVFrameHolder.cpp ${CMAKE_CURRENT_LIST_DIR}/AVFrameHolder.hpp
+    ${CMAKE_CURRENT_LIST_DIR}/AVExceptions.hpp)
 
 set_target_properties(LongExposer PROPERTIES CXX_STANDARD 20)
 target_compile_features(LongExposer PUBLIC cxx_std_20)
